@@ -13,6 +13,6 @@ public class GameTest {
 
     @Test
     public void defaultsToInProgress() {
-        Assert.assertThat(game.getGameStatus(), containsString("IN_PROGRESS"));
+        Assert.assertThat(game.getStatus(), containsString("IN_PROGRESS"));
     }
 }

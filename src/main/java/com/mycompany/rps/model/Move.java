@@ -1,5 +1,6 @@
 package com.mycompany.rps.model;
 
+import com.mycompany.rps.enums.MoveChoice;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,9 @@ public class Move {
     @ManyToOne
     @JoinColumn(name = "player_id", nullable = true)
     private Player player;
+
+    @Enumerated(EnumType.STRING)
+    private MoveChoice moveChoice;
 
     private String move;
 

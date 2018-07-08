@@ -1,8 +1,8 @@
 package com.mycompany.rps.model;
 
+import com.mycompany.rps.enums.GameStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -25,8 +25,8 @@ public class Game {
     @JoinColumn(name = "player_two_id", nullable = true)
     private Player playerTwo;
 
-//    @Enumerated(EnumType.STRING)
-//    private GameStatus gameStatus;
+    @Enumerated(EnumType.STRING)
+    private GameStatus gameStatus;
 
     private String status;
 
@@ -34,7 +34,7 @@ public class Game {
         this.status = "IN_PROGRESS";
     }
 
-    public String getGameStatus() {
+    public String getStatus() {
         return this.status;
     }
 }
