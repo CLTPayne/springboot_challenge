@@ -17,9 +17,9 @@ public class Move {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-//    @ManyToOne
-//    @JoinColumn(name = "game_id", nullable = false)
-//    private Game game;
+    @ManyToOne
+    @JoinColumn(name = "game_id", nullable = true)
+    private Game game;
 
     @ManyToOne
     @JoinColumn(name = "player_id", nullable = true)
